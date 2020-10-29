@@ -1,0 +1,83 @@
+<p>start-flow: indítható folyamatok választható menü</p>
+<ul role="tree" aria-labelledby="tree_label">
+  <!-- Munkáltató értesítése-->
+  <li role="treeitem" aria-expanded="false">
+    <span>
+      Munkáltató értesítése
+    </span>
+    <ul role="group">
+      <li role="treeitem" class="doc">
+        <span>Személyes adatok változása (űrlap)</span>
+        <ul role="group">
+          <li role="treeitem" class="doc">
+            Névváltozás bejelentése űrlap
+          </li>
+          <li role="treeitem" class="doc">
+            Családi állapot változás bejelentése űrlap
+          </li>
+          <li role="treeitem" class="doc">
+            Egyéb változás bejelentése űrlap
+          </li>
+        </ul>
+      </li>
+      <li role="treeitem" class="doc">
+        Egyéb változás
+      </li>
+    </ul>
+  </li>
+  <!-- Kérelem benyújtása-->
+  <ul role="tree" aria-labelledby="tree_label">
+    <li role="treeitem" aria-expanded="false">
+      <span>
+        Kérelem benyújtás
+      </span>
+      <ul role="group">
+        <li role="treeitem" class="doc">
+          Szabadság kérelem
+          <ul role="group">
+            <li role="treeitem" class="doc">
+              Normál szabadság kérelem űrlap
+            </li>
+            <li role="treeitem" class="doc">
+              Fizetés nélküli szabadság kérelem űrlap
+            </li>
+          </ul>
+        </li>
+        <li role="treeitem" class="doc">
+          Támogatás kérelem
+          <ul role="group">
+            <li role="treeitem" class="doc">
+              Temetési támogatás kérelem űrlap
+            </li>
+            <li role="treeitem" class="doc">
+              Egyéb támogatás iránti kérelem űrlap
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <!-- File feltöltés-->
+  <ul role="tree" aria-labelledby="tree_label">
+    <li role="treeitem" class="doc">
+      <span>Kérelem, értesítés feltöltése</span>
+      <ul role="group">
+        <li role="treeitem" class="doc">
+          Kitöltött űrlap feltöltés
+        </li>
+        <li role="treeitem" class="doc">
+          Saját fájl feltöltés
+        </li>
+      </ul>
+    </li>
+  </ul>
+</ul>
+<p>
+  <label>
+    Item Selected:
+    <input id="last_action"
+           type="text"
+           size="15"
+           readonly="">
+  </label>
+</p>
