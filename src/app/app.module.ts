@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { FlowListComponent } from './flow-list/flow-list.component';
 import { WorkFlowsComponent } from './work-flows/work-flows.component';
 import { StartFlowComponent } from './start-flow/start-flow.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material-module';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,11 @@ import { StartFlowComponent } from './start-flow/start-flow.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
