@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PersonData } from '../mockperson-data';
 
 @Component({
   selector: 'app-start-flow',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartFlowComponent implements OnInit {
 
+  @Input()
+  person: PersonData;
   panelOpenState = false;
 
   constructor() { }
@@ -14,4 +17,7 @@ export class StartFlowComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openVacationForm(fizNelkuli?: boolean): void {
+    // TODO megnyitni a szabadságigénylő űrlap komponenst
+  }
 }

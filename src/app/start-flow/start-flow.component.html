@@ -1,10 +1,10 @@
-<p>start-flow: indítható folyamatok választható menü</p>
+<!-- <p>start-flow: indítható folyamatok választható menü</p> -->
 <h2>1. Munkáltató értesítése</h2>
 <!-- #munkáltató értesítés harmonika -->
 <mat-accordion>
-    <!-- értesítés-panel -->
-    <mat-expansion-panel hideToggle>
-      <!-- személyes adatok panel -->
+    <!-- értesítések-panel -->
+    <mat-expansion-panel>
+      <!-- személyes adatok sor -->
       <mat-expansion-panel-header>
 
         <mat-panel-title>
@@ -14,17 +14,22 @@
           Válasszon egyet az űrlapok közül!
         </mat-panel-description>
       </mat-expansion-panel-header>
-
-      <p>1.1.1 Névváltozás bejelentése űrlap</p>
-      <p>1.1.2 Családi állapot változás bejelentése űrlap</p>
-      <p>1.1.3 Egyéb személyes adat változás bejelentése űrlap</p>
+      <p>
+        <button mat-flat-button color="primary">1.1.1 Névváltozás bejelentése űrlap</button>
+      </p>
+      <p>
+        <button mat-flat-button color="primary">1.1.2 Családi állapot változás bejelentése űrlap</button>
+      </p>
+      <p>
+        <button mat-flat-button color="primary">1.1.3 Egyéb személyes adat változás bejelentése űrlap</button>
+      </p>
 
     </mat-expansion-panel>
-    <!-- egyéb adatváltozás panel -->
+    <!-- egyéb adatváltozás sor -->
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          1.2 Egyéb értesítés
+          <button mat-flat-button>1.2 Egyéb értesítés űrlap</button>
         </mat-panel-title>
       </mat-expansion-panel-header>
     </mat-expansion-panel>
@@ -47,13 +52,16 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
 
-      <p>2.1.1 Normál szabadság kérelem űrlap</p>
-      <p>2.1.2 Fizetés nélküli szabadság kérelem űrlap</p>
-      <p>1.1.3 Egyéb személyes adat változás bejelentése űrlap</p>
+      <p>
+        <button mat-flat-button color="primary" (click)="openVacationForm()">2.1.1 Normál szabadság kérelem űrlap</button>
+      </p>
+      <p>
+        <button mat-flat-button color="primary">2.1.2 Fizetés nélküli szabadság kérelem űrlap</button>
+      </p>
 
     </mat-expansion-panel>
     <!-- támogatás panel -->
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           2.2 Támogatás kérelem
@@ -63,8 +71,12 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
 
-      <p>2.2.1 Temetési támogatás kérelem űrlap</p>
-      <p>2.2.2 Egyéb támogatás iránti kérelem űrlap</p>
+      <p>
+        <button mat-flat-button color="primary">2.2.1 Temetési támogatás kérelem űrlap</button>
+      </p>
+      <p>
+        <button mat-flat-button color="primary">2.2.2 Egyéb támogatás iránti kérelem űrlap</button>
+      </p>
 
     </mat-expansion-panel>
   </mat-accordion>

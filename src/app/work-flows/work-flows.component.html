@@ -1,13 +1,28 @@
-<h2>Munkavállaló által indított folyamatok</h2>
-<app-flow-list></app-flow-list>
-<h2>Munkavállaló által indítható folyamatok</h2>
-<div class="row">
-  <div class="col-4">
-    <app-start-flow></app-start-flow>
-  </div>
-  <div class="col-8">
-
-  </div>
+<div>
+  <mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile [colspan]="3" >
+      <mat-grid-tile-header>
+        Munkavállaló által indított folyamatok
+      </mat-grid-tile-header>
+      <app-flow-list></app-flow-list>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="4">
+      <mat-grid-tile-header>
+        Indítható folyamatok
+      </mat-grid-tile-header>
+      <app-start-flow></app-start-flow>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="4">
+      <mat-grid-tile-header>
+        Folyamatok
+      </mat-grid-tile-header>
+      <div>
+        Űrlap / Fájlfeltöltő app
+        <app-vacation-form></app-vacation-form>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
+
 
 
