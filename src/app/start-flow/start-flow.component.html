@@ -1,83 +1,93 @@
 <p>start-flow: indítható folyamatok választható menü</p>
-<ul role="tree" aria-labelledby="tree_label">
-  <!-- Munkáltató értesítése-->
-  <li role="treeitem" aria-expanded="false">
-    <span>
-      Munkáltató értesítése
-    </span>
-    <ul role="group">
-      <li role="treeitem" class="doc">
-        <span>Személyes adatok változása (űrlap)</span>
-        <ul role="group">
-          <li role="treeitem" class="doc">
-            Névváltozás bejelentése űrlap
-          </li>
-          <li role="treeitem" class="doc">
-            Családi állapot változás bejelentése űrlap
-          </li>
-          <li role="treeitem" class="doc">
-            Egyéb változás bejelentése űrlap
-          </li>
-        </ul>
-      </li>
-      <li role="treeitem" class="doc">
-        Egyéb változás
-      </li>
-    </ul>
-  </li>
-  <!-- Kérelem benyújtása-->
-  <ul role="tree" aria-labelledby="tree_label">
-    <li role="treeitem" aria-expanded="false">
-      <span>
-        Kérelem benyújtás
-      </span>
-      <ul role="group">
-        <li role="treeitem" class="doc">
-          Szabadság kérelem
-          <ul role="group">
-            <li role="treeitem" class="doc">
-              Normál szabadság kérelem űrlap
-            </li>
-            <li role="treeitem" class="doc">
-              Fizetés nélküli szabadság kérelem űrlap
-            </li>
-          </ul>
-        </li>
-        <li role="treeitem" class="doc">
-          Támogatás kérelem
-          <ul role="group">
-            <li role="treeitem" class="doc">
-              Temetési támogatás kérelem űrlap
-            </li>
-            <li role="treeitem" class="doc">
-              Egyéb támogatás iránti kérelem űrlap
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <!-- File feltöltés-->
-  <ul role="tree" aria-labelledby="tree_label">
-    <li role="treeitem" class="doc">
-      <span>Kérelem, értesítés feltöltése</span>
-      <ul role="group">
-        <li role="treeitem" class="doc">
-          Kitöltött űrlap feltöltés
-        </li>
-        <li role="treeitem" class="doc">
-          Saját fájl feltöltés
-        </li>
-      </ul>
-    </li>
-  </ul>
-</ul>
-<p>
-  <label>
-    Item Selected:
-    <input id="last_action"
-           type="text"
-           size="15"
-           readonly="">
-  </label>
-</p>
+<h2>1. Munkáltató értesítése</h2>
+<!-- #munkáltató értesítés harmonika -->
+<mat-accordion>
+    <!-- értesítés-panel -->
+    <mat-expansion-panel hideToggle>
+      <!-- személyes adatok panel -->
+      <mat-expansion-panel-header>
+
+        <mat-panel-title>
+          1.1 Személyes adatok változása (űrlap)
+        </mat-panel-title>
+        <mat-panel-description>
+          Válasszon egyet az űrlapok közül!
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>1.1.1 Névváltozás bejelentése űrlap</p>
+      <p>1.1.2 Családi állapot változás bejelentése űrlap</p>
+      <p>1.1.3 Egyéb személyes adat változás bejelentése űrlap</p>
+
+    </mat-expansion-panel>
+    <!-- egyéb adatváltozás panel -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          1.2 Egyéb értesítés
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+</mat-accordion>
+<!-- munkáltató értesítés harmonika vége -->
+
+<h2>2. Kérelem benyújtás</h2>
+
+<!--  kérelem harmonika -->
+<mat-accordion>
+  <!-- szabadság panel -->
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          2.1 Szabadság kérelem
+        </mat-panel-title>
+        <mat-panel-description>
+          Válasszon egyet az űrlapok közül!
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>2.1.1 Normál szabadság kérelem űrlap</p>
+      <p>2.1.2 Fizetés nélküli szabadság kérelem űrlap</p>
+      <p>1.1.3 Egyéb személyes adat változás bejelentése űrlap</p>
+
+    </mat-expansion-panel>
+    <!-- támogatás panel -->
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          2.2 Támogatás kérelem
+        </mat-panel-title>
+        <mat-panel-description>
+          Válasszon egyet az űrlapok közül!
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>2.2.1 Temetési támogatás kérelem űrlap</p>
+      <p>2.2.2 Egyéb támogatás iránti kérelem űrlap</p>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+<h2>3. Kérelem, értesítés, saját fájl feltöltése</h2>
+<!-- fájlfeltöltés harmonika -->
+<mat-accordion>
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      3.1 Kitöltött űrlap feltöltése
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      3.2 Saját fájl feltöltése
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+</mat-accordion>
+
+
+
+

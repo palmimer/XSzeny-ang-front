@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartFlowComponent implements OnInit {
 
+  panelOpenState = false;
+
   constructor() { }
 
   ngOnInit(): void {
